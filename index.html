@@ -1,36 +1,49 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="hu">
-<head>
-    <meta charset="UTF-8">
-    <meta author="DYB">
-    <meta name="viewport" content="width=, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta author="DYB" />
+    <meta name="viewport" content="width=, initial-scale=1.0" />
     <title>Do Your Best 🏆</title>
-</head>
-<link rel="stylesheet" href="styles.css">
-<script src="script.js"></script>
-<body>
+  </head>
+  <link rel="stylesheet" href="styles.css" />
+  <script src="script.js"></script>
+  <body>
     <nav class="sidenav">
-        <div class="logo">
-            <p>DO YOUR BEST</p>
+      <div class="logo">
+        <p>DO YOUR BEST</p>
+      </div>
+      <div class="category-list">
+        <div id="category-item">
+          <a href="#">MUNKA</a>
         </div>
-        <div class="category-list">
-            <div id="category-item">
-                <a href="#">MUNKA</a>
-            </div>
-            <div id="category-item">
-                <a href="#">TANULÁS</a>
-            </div>
-            <div id="category-item">
-                <a href="#">SZÓRAKOZÁS</a>
-            </div>
+        <div id="category-item">
+          <a href="#">TANULÁS</a>
         </div>
+        <div id="category-item">
+          <a href="#">SZÓRAKOZÁS</a>
+        </div>
+      </div>
     </nav>
 
     <main class="main">
-        <header>
-            <h1>MUNKA</h1>
-            <hr class="section-divider">
-        </header>
+      <header>
+        <h1>MUNKA</h1>
+        <hr class="section-divider" />
+      </header>
+
+      <section>
+        <ul id="myUL">
+          <li>Feladat 1</li>
+          <li>Feladat 2</li>
+          <li>Feladat 3</li>
+        </ul>
+
+        <div class="input-container">
+          <input type="text" id="myInput" placeholder="Írd be a feladatot..." />
+          <button onclick="newElement()" class="addBtn">Hozzáadás</button>
+        </div>
+      </section>
     </main>
-</body>
+  </body>
 </html>
