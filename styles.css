@@ -114,6 +114,65 @@ li {
   background-color: #444444;
 }
 
+#myUL {
+  padding: 0;
+  margin-left: calc(100% - 57%);
+}
+
+#myUL li {
+  display: flex;
+  position: relative;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+  cursor: pointer;
+
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+ul li.checked {
+  background: #888;
+  color: #a02929;
+  text-decoration: line-through;
+}
+
+/* Add a "checked" mark when clicked on */
+ul li.checked::before {
+  content: '';
+  position: absolute;
+  border-color: #05ad05;
+  border-style: solid;
+  border-width: 0 2px 2px 0;
+  top: 10px;
+  left: 16px;
+  transform: rotate(45deg);
+  height: 15px;
+  width: 7px;
+}
+
+ul li:nth-child(odd) {
+  background: #f9f9f9;
+}
+
+/* Darker background-color on hover */
+ul li:hover {
+  background: #ddd;
+}
+
+.close {
+  color: white;
+  cursor: pointer;
+  font-weight: bold;
+  margin-right: 4px;
+}
+
+.close:hover {
+  color: red;
+}
+
 @media screen and (max-height: 450px) {
   .sidenav {
     padding-top: 15px;

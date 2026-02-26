@@ -13,23 +13,19 @@ for (i = 0; i < myNodelist.length; i++) {
 var close = document.getElementsByClassName("close");
 var i;
 for (i = 0; i < close.length; i++) {
-  close[i].onclick = function () {
+  close[i].onclick = function() {
     var div = this.parentElement;
     div.style.display = "none";
-  };
+  }
 }
 
 // Add a "checked" symbol when clicking on a list item
-var list = document.querySelector("ul");
-list.addEventListener(
-  "click",
-  function (ev) {
-    if (ev.target.tagName === "LI") {
-      ev.target.classList.toggle("checked");
-    }
-  },
-  false,
-);
+var list = document.querySelector('myUL');
+list.addEventListener('click', function(ev) {
+  if (ev.target.tagName === 'LI') {
+    ev.target.classList.toggle('checked');
+  }
+}, false);
 
 // Create a new list item when clicking on the "Add" button
 function newElement() {
@@ -37,8 +33,8 @@ function newElement() {
   var inputValue = document.getElementById("myInput").value;
   var t = document.createTextNode(inputValue);
   li.appendChild(t);
-  if (inputValue === "") {
-    alert("You must write something!");
+  if (inputValue === '') {
+    alert("írj ide vmit");
   } else {
     document.getElementById("myUL").appendChild(li);
   }
@@ -51,9 +47,9 @@ function newElement() {
   li.appendChild(span);
 
   for (i = 0; i < close.length; i++) {
-    close[i].onclick = function () {
+    close[i].onclick = function() {
       var div = this.parentElement;
       div.style.display = "none";
-    };
+    }
   }
-}
+} 
