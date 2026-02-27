@@ -58,8 +58,10 @@ body {
 }
 
 main {
-  margin-left: 240px; /* Same as the width of the sidenav */
-  font-size: 28px; /* Increased text to enable scrolling */
+  margin-left: 240px;
+  /* Same as the width of the sidenav */
+  font-size: 28px;
+  /* Increased text to enable scrolling */
   text-align: center;
 }
 
@@ -121,10 +123,10 @@ li {
 
 #myUL li {
   display: flex;
-  position: relative;
-  justify-content: space-between;
   align-items: center;
-  padding: 10px;
+  justify-content: space-between;
+  position: relative;
+  padding: 10px 40px;
   cursor: pointer;
 
   -webkit-user-select: none;
@@ -139,16 +141,21 @@ ul li.checked {
   text-decoration: line-through;
 }
 
+ul li.checked .task-text {
+  text-decoration: line-through;
+  color: rgba(0, 0, 0, 0.349);
+}
+
 /* Add a "checked" mark when clicked on */
 ul li.checked::before {
   content: '';
   position: absolute;
+  left: 15px;
+  top: 50%;
+  transform: translateY(-50%) rotate(45deg);
   border-color: #05ad05;
   border-style: solid;
   border-width: 0 2px 2px 0;
-  top: 10px;
-  left: 16px;
-  transform: rotate(45deg);
   height: 15px;
   width: 7px;
 }
@@ -163,10 +170,12 @@ ul li:hover {
 }
 
 .close {
-  color: white;
+  position: absolute;
+  right: 15px;
+  color: black;
   cursor: pointer;
   font-weight: bold;
-  margin-right: 4px;
+  text-decoration: none;
 }
 
 .close:hover {
@@ -177,6 +186,7 @@ ul li:hover {
   .sidenav {
     padding-top: 15px;
   }
+
   .sidenav a {
     font-size: 18px;
   }
