@@ -1,3 +1,13 @@
+// bezarja
+var close = document.getElementsByClassName("close");
+var i;
+for (i = 0; i < close.length; i++) {
+  close[i].onclick = function (e) {
+    e.stopPropagation();
+    var div = this.parentElement;
+    div.style.display = "none";
+  }
+}
 
 // kipipálja
 var list = document.querySelector('#myUL');
